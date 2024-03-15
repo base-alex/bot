@@ -3,68 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Personal Website</title>
+  <title>Anime.js Test</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.3/anime.min.js"></script>
 </head>
 <body>
 
   <header class="header">
-    <h1>Your Name</h1>
+    <h1>Scroll Down!</h1>
     <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      </nav>
   </header>
 
   <main>
 
-    <section class="hero" id="hero">
-      <h2>Welcome to my world!</h2>
-      <p>A passionate individual with a knack for (your skills). Scroll down to learn more!</p>
+    <section class="message" id="message1">
+      <h2>This is the first message!</h2>
     </section>
 
-    <section class="about" id="about">
-      <h2>About Me</h2>
-      <p> (Write a short introduction about yourself, your interests, and passions) </p>
-      <div class="skills">
-        <h3>Skills</h3>
-        <ul>
-          <li>Skill 1</li>
-          <li>Skill 2</li>
-          <li>Skill 3</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="projects" id="projects">
-      <h2>Projects</h2>
-      <p> ( Briefly describe some of your projects. You can include links) </p>
-      <div class="project-card">
-        <h3>Project 1</h3>
-        <p> (Short description of project 1) </p>
-        <a href="#">Learn More</a>  </div>
-      <div class="project-card">
-        <h3>Project 2</h3>
-        <p> (Short description of project 2) </p>
-        <a href="#">Learn More</a>  </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <h2>Get in Touch</h2>
-      <p>Feel free to reach out to me via:</p>
-      <ul class="contact-info">
-        <li><a href="mailto:youremail@email.com">youremail@email.com</a></li>
-        <li><a href="#">(Your social media link - optional)</a></li>
-      </ul>
+    <section class="message" id="message2">
+      <h2>This is the second message!</h2>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>&copy; 2024 Base-Alex</p>
+    <p>&copy; 2024 Anime.js Test</p>
   </footer>
+
+  <script>
+  // Anime.js for message sections
+  var message1 = document.querySelector('#message1 h2');
+  var message2 = document.querySelector('#message2 h2');
+
+  window.addEventListener('scroll', function() {
+    if(window.scrollY > 100) {
+      anime({
+        targets: message1,
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeInOutSine'
+      });
+    }
+    if(window.scrollY > 300) {
+      anime({
+        targets: message2,
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeInOutSine'
+      });
+    }
+  });
+  </script>
 
 </body>
 </html>
